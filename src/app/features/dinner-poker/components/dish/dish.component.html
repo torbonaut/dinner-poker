@@ -1,0 +1,23 @@
+<div
+  class="m-3 rounded-lg bg-white px-4 py-4 shadow-xl ring-1 ring-slate-900/5 dark:bg-slate-800"
+>
+  <span
+    class="bg-{pink}-100 float-right mr-2 rounded px-2.5 py-0.5 text-xs font-medium text-pink-800 dark:bg-pink-900 dark:text-pink-300"
+    >main</span
+  >
+  <span
+    class="float-right mr-2 rounded bg-pink-100 px-2.5 py-0.5 text-xs font-medium text-pink-800 dark:bg-pink-900 dark:text-pink-300"
+    >quick</span
+  >
+  <h3
+    class="text-base font-medium tracking-tight text-slate-900 dark:text-white"
+  >
+    {{ dish.title
+    }}<span class="block text-sm text-slate-600"
+      >{{ dish.cooked_count }} gekocht</span
+    >
+  </h3>
+  <p class="mt-2 text-sm text-slate-500 dark:text-slate-400">
+    {{ dish.description }}
+  </p>
+</div>
