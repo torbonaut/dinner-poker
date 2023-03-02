@@ -4,10 +4,11 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app-routes';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './shared/components/header/header.component';
+import {PageLoginComponent} from "./shared/components/page-login/page-login.component";
 import { SUPABASE_KEY, SUPABASE_URL } from './tokens/supabase.token';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent],
+  declarations: [AppComponent, HeaderComponent, PageLoginComponent],
   imports: [BrowserModule, RouterModule.forRoot(appRoutes)],
   providers: [
     {

@@ -6,5 +6,5 @@ import { Component, ChangeDetectionStrategy } from '@angular/core';
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  public title = 'dinner-poker';
+  public title = 'page-dinner-poker';
 }

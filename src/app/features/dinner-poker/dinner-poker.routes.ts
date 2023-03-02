@@ -1,9 +1,9 @@
-import { Routes } from "@angular/router";
-import { DinnerPokerComponent } from "./pages/dinner-poker/dinner-poker.component";
+import type { Routes } from "@angular/router";
+import { PageDinnerPokerComponent } from "./components/page-dinner-poker/page-dinner-poker.component";
 
 export const dinnerPokerRoutes: Routes = [
     {
         path: '',
-        component: DinnerPokerComponent
+        component: PageDinnerPokerComponent
     }
 ];

@@ -1,16 +1,16 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DinnerPokerComponent } from './pages/dinner-poker/dinner-poker.component';
+import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
-import { dinnerPokerRoutes } from './dinner-poker.routes';
 import { DishComponent } from './components/dish/dish.component';
+import { PageDinnerPokerComponent } from './components/page-dinner-poker/page-dinner-poker.component';
+import { dinnerPokerRoutes } from './dinner-poker.routes';
 
 
 
 @NgModule({
   declarations: [
-    DinnerPokerComponent,
-    DishComponent
+    DishComponent,
+    PageDinnerPokerComponent
   ],
   imports: [
     CommonModule,
