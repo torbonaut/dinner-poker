@@ -1,12 +1,14 @@
 import {ChangeDetectionStrategy, Component} from "@angular/core";
-import type {FormBuilder} from "@angular/forms";
+import {FormBuilder} from "@angular/forms";
 import {BehaviorSubject} from "rxjs";
-import type {SupabaseService} from "../../services/supabase.service";
+import {SupabaseService} from "../../services/supabase.service";
+import {RouteDataService} from "../../services/route-data.service";
+import {ActivatedRoute} from "@angular/router";
 
 @Component({
     selector: 'app-page-login',
     templateUrl: './page-login.component.html',
-    changeDetection: ChangeDetectionStrategy.OnPush,
+    changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class PageLoginComponent {
     private loading$: BehaviorSubject<boolean> = new BehaviorSubject(false);
@@ -15,8 +17,10 @@ export class PageLoginComponent {
         email: '',
     })
 
-    private constructor(private readonly supabase: SupabaseService, private readonly formBuilder: FormBuilder) {
+    public constructor(private readonly supabase: SupabaseService, private readonly formBuilder: FormBuilder, private readonly routeDataService: RouteDataService, activatedRoute: ActivatedRoute) {
+        this.routeDataService.updateRouteData(activatedRoute.snapshot.data['showHeader'] );
     }
+
 
     public async onSubmit(): Promise<void> {
         try {

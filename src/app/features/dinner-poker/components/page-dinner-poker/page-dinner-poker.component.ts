@@ -2,7 +2,7 @@ import type { OnInit } from '@angular/core';
 import { Component, ChangeDetectionStrategy } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports
-import { SupabaseService } from 'src/app/shared/services/supabase.service';
+import { SupabaseService } from 'src/app/core/services/supabase.service';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
